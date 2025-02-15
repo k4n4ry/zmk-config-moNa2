@@ -13,7 +13,7 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <100>;
+    tapping-term-ms = <200>;
 };
 
 / {
@@ -23,6 +23,26 @@
         q_w_tab {
             bindings = <&kp TAB>;
             key-positions = <0 1>;
+        };
+
+        ctrl_space {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <10 38>;
+        };
+
+        quote {
+            bindings = <&kp SQT>;
+            key-positions = <20 21>;
+        };
+
+        hyphen {
+            bindings = <&kp MINUS>;
+            key-positions = <7 8>;
+        };
+
+        eq {
+            bindings = <&kp EQUAL>;
+            key-positions = <8 9>;
         };
     };
 
@@ -60,8 +80,8 @@
         default_layer {
             bindings = <
 &lt 6 Q             &kp W         &kp E             &kp R             &kp T                                             &kp Y        &kp U  &kp I      &kp O    &lt 6 P
-&mt LEFT_CONTROL A  &kp S         &kp D             &kp F             &kp G        &trans                &kp MINUS      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL SQT
-&mt LEFT_SHIFT Z    &kp X         &kp C             &kp V             &kp B        &lt 4 ESCAPE          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
+&mt LEFT_CONTROL A  &kp S         &kp D             &kp F             &kp G        &trans                &kp MINUS      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL SEMICOLON
+&mt LEFT_SHIFT Z    &kp X         &kp C             &kp V             &kp B        &lt 4 ESCAPE          &kp SQT        &kp N        &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
 &kp LEFT_COMMAND    &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 1 INT_HENKAN  &lt 2 SPACE  &lt 3 INT_MUHENKAN    &kp BACKSPACE  &lt 1 ENTER                             &kp RIGHT_SHIFT
             >;
 
@@ -70,10 +90,10 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &kp F12
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                    &kp NUMBER_6  &kp N7  &kp N8            &kp N9             &kp N0
+&trans        &trans        &trans        &trans        &trans  &trans    &trans  &kp F6        &kp F7  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
+&trans        &trans        &trans        &trans        &trans  &trans    &trans  &trans        &trans  &trans            &trans             &kp F11
+&trans        &trans        &trans        &trans        &trans  &trans    &trans  &trans                                                     &kp F12
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -92,10 +112,10 @@
 
         layer_3 {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                     &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans    &trans  &trans                          &trans
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                     &trans    &trans    &trans        &trans     &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans    &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans    &trans  &trans    &trans    &trans        &trans     &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans    &trans  &trans                                       &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
