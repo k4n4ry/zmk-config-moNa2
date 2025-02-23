@@ -103,6 +103,11 @@
             bindings = <&kp RIGHT_GUI>;
             key-positions = <32 31>;
         };
+
+        ap_asc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <10 9>;
+        };
     };
 
     macros {
